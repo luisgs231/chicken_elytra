@@ -10,7 +10,7 @@ public class ChickenElytra {
 	private static final Logger LOGGER = LogManager.getLogger();
 	
 	public ChickenElytra() {
-		LOGGER.debug("Probando esto... xD");
+		LOGGER.debug("Probando esto, con git también... xD");
 	}
 	
 
