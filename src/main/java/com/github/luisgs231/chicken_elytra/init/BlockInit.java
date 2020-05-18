@@ -16,6 +16,7 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(ChickenElytra.MODID)
 @Mod.EventBusSubscriber(modid = ChickenElytra.MODID, bus = Bus.MOD)
 public class BlockInit {
+	/*
 	public static final Block test_block = null;
 
 	
@@ -28,4 +29,5 @@ public class BlockInit {
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
 		event.getRegistry().register(new BlockItem(test_block, new Item.Properties().maxStackSize(64).group(ItemGroup.MISC)).setRegistryName("test_block"));
 	}
+	*/
 }

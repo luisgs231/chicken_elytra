@@ -31,14 +31,14 @@ displayURL="https://github.com/luisgs231/chicken_elytra" #optional
 logoFile="examplemod.png" #optional
 
 # A text field displayed in the mod UI
-credits="Thanks for this example mod goes to Java" #optional
+credits="Thanks for the tutorials: https://www.youtube.com/channel/UCicAXLV4w2X6bn2EuM4To4w" #optional
 
 # A text field displayed in the mod UI
 authors="luisgs231" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Elytra made of chickens.
+My first attempt to create a mod. Now you can craft the Elytra with 7 chicken feathers. You can also craft two arrows with cobblestone, stick and feather.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.chicken_elytra]] #optional
