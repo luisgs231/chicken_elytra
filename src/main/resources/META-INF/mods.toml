@@ -39,6 +39,7 @@ authors="luisgs231" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 Now you can craft the Elytra with 6 chicken feathers. You can also craft two arrows with cobblestone, stick and feather.
+Gunpowder is also craftable using gravel, sand and coal.
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.chicken_elytra]] #optional
