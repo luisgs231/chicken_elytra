@@ -2,8 +2,11 @@ package com.github.luisgs231.chicken_elytra;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.AnvilUpdateEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.player.AnvilRepairEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -31,6 +34,24 @@ public class ChickenElytra {
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
     }
+	
+	@SubscribeEvent
+	public void onAnvilUpdate(AnvilUpdateEvent event) {
+		resetRepairValue(event.getLeft());
+		resetRepairValue(event.getRight());
+	}
+	
+	@SubscribeEvent
+	public void onAnvilUpdate(AnvilRepairEvent event) {
+		resetRepairValue(event.getItemResult());
+		event.setBreakChance(0);
+	}
+	
+	private void resetRepairValue(ItemStack stack) {
+		if (!stack.isEmpty() && stack.hasTag()) {
+			stack.getTag().remove("RepairCost");
+		}
+	}
 	
 	private void setup(final FMLCommonSetupEvent event)
     {
